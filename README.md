@@ -2,6 +2,8 @@
 
 Official website for OpenSaaSLabs.
 
+_Last updated: 2026-05-12_
+
 ## Stack
 
 - Next.js 14
