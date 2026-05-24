@@ -1,9 +1,12 @@
+import { OpenDataWorldNav } from '@/components/opendataworld-nav'
+
 const graphLayers = ['Knowledge graph', 'Entity graph', 'Lineage graph', 'Dependency graph', 'Ontology mapping', 'Graph query APIs']
 
 export default function GraphPage() {
   return (
-    <main className="min-h-screen bg-slate-950 px-6 py-20 text-white sm:px-10 lg:px-16">
-      <section className="mx-auto max-w-7xl">
+    <main className="min-h-screen bg-slate-950 text-white">
+      <OpenDataWorldNav />
+      <section className="mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:px-16">
         <a href="/opendataworld" className="text-sm font-semibold text-cyan-300">← OpenDataWorld</a>
         <p className="mt-10 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Graph database</p>
         <h1 className="mt-5 max-w-4xl text-5xl font-black tracking-tight sm:text-7xl">Connect datasets, entities, sources, owners, and transformations.</h1>
