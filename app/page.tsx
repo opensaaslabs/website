@@ -26,6 +26,7 @@ export default function Home() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <ButtonLink href="https://github.com/opensaaslabs">Explore repositories</ButtonLink>
               <ButtonLink href="/docs" variant="secondary">Read docs</ButtonLink>
+              <ButtonLink href="/opendataworld" variant="secondary">OpenDataWorld</ButtonLink>
             </div>
           </div>
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-cyan-950/40 backdrop-blur">
@@ -38,6 +39,13 @@ export default function Home() {
       </section>
       <Section id="platform" eyebrow="Platform pillars" title="Everything needed to move from idea to production.">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">{pillars.map((pillar) => <div key={pillar} className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 text-lg font-semibold text-slate-100">{pillar}</div>)}</div>
+      </Section>
+      <Section id="opendataworld" eyebrow="Featured lab" title="OpenDataWorld: AI-native public data infrastructure.">
+        <a href="/opendataworld" className="block rounded-[2rem] border border-cyan-300/20 bg-cyan-300/10 p-8 transition hover:-translate-y-1 hover:bg-cyan-300/15">
+          <h3 className="text-3xl font-black">OpenDataWorld</h3>
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">A trusted open data platform for multimodal databases, vector search, graph intelligence, entity detection, data lakes, sync, governance, lineage, analytics, and developer APIs.</p>
+          <p className="mt-6 font-semibold text-cyan-200">Explore OpenDataWorld →</p>
+        </a>
       </Section>
       <Section id="projects" eyebrow="Ecosystem" title="A lab network for reusable SaaS infrastructure.">
         <div className="grid gap-6 lg:grid-cols-3">{projects.map((project) => <a key={project.name} href={project.href} className="rounded-[2rem] border border-white/10 bg-slate-900/70 p-8 transition hover:-translate-y-1 hover:bg-slate-900"><h3 className="text-2xl font-bold">{project.name}</h3><p className="mt-4 leading-7 text-slate-300">{project.description}</p></a>)}</div>
