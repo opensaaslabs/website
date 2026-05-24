@@ -1,0 +1,74 @@
+const pillars = [
+  'Multimodal database',
+  'Vector database',
+  'Graph database',
+  'Entity detection',
+  'Data lake',
+  'Data sync',
+  'Search and analytics',
+  'Data governance',
+  'Data management',
+  'Data lineage',
+  'Data quality',
+  'Developer APIs',
+]
+
+export default function OpenDataWorldPage() {
+  return (
+    <main className="min-h-screen bg-slate-950 text-white">
+      <section className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-24 sm:px-10 lg:px-16">
+        <div className="max-w-4xl">
+          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+            OpenDataWorld
+          </p>
+          <h1 className="text-5xl font-black tracking-tight sm:text-7xl">
+            Open data infrastructure for the AI-native world.
+          </h1>
+          <p className="mt-8 max-w-3xl text-xl leading-8 text-slate-300">
+            OpenDataWorld unifies multimodal databases, vector search, graph intelligence,
+            governance, lineage, sync, analytics, and APIs into one trusted public data platform.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a className="rounded-2xl bg-white px-6 py-4 font-bold text-slate-950" href="#platform">
+              Explore platform
+            </a>
+            <a className="rounded-2xl border border-white/20 px-6 py-4 font-bold text-white" href="#developers">
+              Developer docs
+            </a>
+          </div>
+        </div>
+
+        <div id="platform" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {pillars.map((pillar) => (
+            <div key={pillar} className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">
+              <div className="mb-5 h-10 w-10 rounded-2xl bg-cyan-300/20" />
+              <h2 className="text-xl font-bold">{pillar}</h2>
+              <p className="mt-3 text-sm leading-6 text-slate-400">
+                Core capability for discovering, governing, synchronizing, tracing,
+                enriching, searching, analyzing, and using open datasets in AI systems.
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <section id="developers" className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 sm:p-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">
+            Developer layer
+          </p>
+          <h2 className="mt-4 text-3xl font-black sm:text-5xl">
+            APIs for search, vectors, graphs, lineage, sync, entities, and analytics.
+          </h2>
+          <pre className="mt-8 overflow-auto rounded-2xl bg-black p-6 text-sm text-cyan-200">
+{`GET /api/datasets
+GET /api/search?q=climate
+POST /api/vectors/search
+POST /api/graph/query
+GET /api/datasets/{id}/lineage
+GET /api/datasets/{id}/sync
+POST /api/entities/extract`}
+          </pre>
+        </section>
+      </section>
+    </main>
+  )
+}
